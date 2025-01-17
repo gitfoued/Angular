@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent {
+allownewserver: boolean=false;
+constructor(){
+  setTimeout(()=>{
+    this.allownewserver=true;
+  } ,2000)
+}
 
 }
