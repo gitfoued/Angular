@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-first-app
+  labels:
+    tag: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: site-front
+    
+  template:
+    metadata:
+      labels:
+        app: site-front
+    spec:
+      containers:
+        - name: mon-app
+          image: my-first-app:1.0
+          ports:
+            - containerPort: 80
+
+    
