@@ -1,5 +1,16 @@
+<label for="">
+    <input type="text"
+    (input)="onUpdateServer($event)">
+</label>
+<p>{{SererUpdateResult}}</p>
+
 <button class="btn  btn-primary" 
-[disabled]='!allownewserver'></button>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
+[disabled]='!allownewserver'
+(click)="onCreateServer()">Add server</button>
+<!-- <p>{{serverCreationStatus}}</p> -->
+<p *ngIf="serverCreated ; else noServer">server was created, server name is {{SererUpdateResult}}</p>
+<ng-template #noServer>
+    <p >server not created</p>
+</ng-template>
+
+<app-server *ngFor="let server of servers "></app-server>

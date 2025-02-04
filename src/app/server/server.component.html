@@ -1,2 +1,3 @@
 <!-- string interpolatipon -->
-<p>hello from server with server id{{serverId}}    is {{getserverstatus()}}   </p>
+<p [ngStyle]="{backgroundColor : onColor() }"
+ngClass="{offline: serverStatus === 'offline'}">hello from server with server id{{serverId}}    is {{getserverstatus()}}   </p>
