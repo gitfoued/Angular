@@ -1,1 +1,26 @@
-<p>receip-list works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn btn-success">New Receips</div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#"
+        class="list-group-item clearfix"
+        *ngFor="let receip of receips"
+        >
+        <div class="pull-left">
+         <h4 class="list-group-item-heading">{{receip.name}}</h4>
+         <p class="list-group-item-text">{{receip.description}}</p>
+        </div>
+         <span class="pull-right">
+            <img 
+            [src]="receip.imagePath"
+            alt="{{ receip.name }}"
+            class="img-responsive">
+         </span>
+        </a>
+        <app-receip-item></app-receip-item>
+    </div>
+</div>
