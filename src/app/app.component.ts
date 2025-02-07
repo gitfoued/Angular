@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  navigate:string='receip';
+onNavigate(feature: string) {
+this.navigate=feature;
+}
 }

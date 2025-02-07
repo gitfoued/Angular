@@ -15,12 +15,12 @@
 <app-warning></app-warning>
 <app-success-alert></app-success-alert>
 </div> -->
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-          <app-receips></app-receips>
-          <app-shopping-list></app-shopping-list>
+          <app-receips *ngIf=" navigate === 'receip'"></app-receips>
+          <app-shopping-list *ngIf=" navigate !== 'receip'"></app-shopping-list>
         </div>
 
     </div>

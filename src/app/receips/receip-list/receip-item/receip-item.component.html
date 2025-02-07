@@ -1,1 +1,15 @@
-<p>Hello receip-item</p>
+<a href="#"
+class="list-group-item clearfix"
+(click)="onDeclenche()"
+>
+<div class="pull-left">
+ <h4 class="list-group-item-heading">{{receip.name}}</h4>
+ <p class="list-group-item-text">{{receip.description}}</p>
+</div>
+ <span class="pull-right">
+    <img 
+    [src]="receip.imagePath"
+    alt="{{ receip.name }}"
+    class="img-responsive">
+ </span>
+</a>

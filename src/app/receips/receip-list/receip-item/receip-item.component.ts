@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { receip } from '../../receip.model';
 
 @Component({
   selector: 'app-receip-item',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class ReceipItemComponent {
 
+  @Input() receip!: receip;
+  @Output() recipeSelected=new EventEmitter<void>();
+  constructor(){
+  }
+  onDeclenche() {
+    this.recipeSelected.emit();
+    }
 }
